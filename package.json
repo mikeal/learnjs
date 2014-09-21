@@ -1,13 +1,15 @@
 {
   "name": "learnjs",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Workshopper for learning JavaScript.",
   "main": "index.js",
   "dependencies": {
     "adventure": "^2.7.0"
   },
   "devDependencies": {},
-  "bin" : { "learnjs" : "./runner.js" },
+  "bin": {
+    "learnjs": "./runner.js"
+  },
   "scripts": {
     "test": "node test.js"
   },
