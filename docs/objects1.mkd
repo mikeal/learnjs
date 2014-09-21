@@ -1,0 +1,16 @@
+In JavaScript, everying is considered an "object." Objects are *things* that have `properties`.
+
+You've already learned about Strings, strings are objects and have properties too, they have properties that help you manipulate the data in those strings. For instance, there is a function on strings that will turn that string in to upper case, sort of like the string was written in ALL CAPS.
+
+```javascript
+var stringVariable = "It's a stringy world."
+var upperCaseVariable = stringVariable.toUpperCase()
+```
+
+Or, you could write the same thing this way:
+
+```javascript
+var upperCaseVariable = "It's a stringy world.".toUpperCase()
+```
+
+For this lesson, print the variable you created in the previous lesson in UpperCase using the string object's `.toUpperCase()` method.

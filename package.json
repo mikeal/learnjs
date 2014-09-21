@@ -1,0 +1,28 @@
+{
+  "name": "learnjs",
+  "version": "0.0.0",
+  "description": "Workshopper for learning JavaScript.",
+  "main": "index.js",
+  "dependencies": {
+    "adventure": "^2.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeal/learnjs"
+  },
+  "keywords": [
+    "workshopper",
+    "nodeschool",
+    "learning"
+  ],
+  "author": "Mikeal Rogers <mikeal.rogers@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeal/learnjs/issues"
+  },
+  "homepage": "https://github.com/mikeal/learnjs"
+}

@@ -1,0 +1,23 @@
+Welcome to JavaScript, you're gonna love it :)
+
+The first thing you should learn is how to print things. Printing things is the best way to debug your programs and learn what might be going on. In JavaScript you can use `console.log` to print *almost* anything.
+
+Create a new file called `program.js` and copy this in to it:
+
+```javascript
+console.log("Hello World!")
+```
+
+Then, on your command line, run your program using `node` like this:
+
+`node program.js`
+
+The program should print the message `Hello World!`. You can run all the JavaScript programs your write like this.
+
+Once you're confident you have completed an lesson you should use `learnjs` to verify it in order to move on to the next lesson. `learnjs verify` will tell you if you have the right answer and note the lessons you've finished the next time you run `learnjs`. On your command line verify the `Hello World!` program you just wrote using:
+
+`learnjs verify program.js`
+
+If it says `It worked!` then you've passed this lesson and can move on to the next by running:
+
+`learnjs`
