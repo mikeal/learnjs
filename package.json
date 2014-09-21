@@ -4,7 +4,8 @@
   "description": "Workshopper for learning JavaScript.",
   "main": "index.js",
   "dependencies": {
-    "adventure": "^2.7.0"
+    "adventure": "^2.7.0",
+    "cli-md": "^0.1.0"
   },
   "devDependencies": {},
   "bin": {

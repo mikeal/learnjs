@@ -2,6 +2,7 @@ var fs = require('fs')
   , path = require('path')
   , docs = path.join(__dirname, 'docs')
   , child_process = require('child_process')
+  , md = require('cli-md')
   , exec = child_process.exec
   ;
 
@@ -120,7 +121,7 @@ function verifyFunction (args, cb) {
 }
 
 function docText (name) {
-  return fs.readFileSync(path.join(docs, name)).toString()
+  return md(fs.readFileSync(path.join(docs, name)).toString()).replace(/&#39;/g, "'").replace(/&quot;/g, '"')
 }
 
 exports['Hello World!'] =

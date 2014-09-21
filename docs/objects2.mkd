@@ -5,7 +5,7 @@ var myObject = { property: "Just another string." }
 console.log(myObject.property)
 ```
 
-You may not have noticed, but you've been using an object this whole time: `console`. `log()` is actually a property of the console object which you access using the "dot syntax." You can access properties of any object using like this.
+You may not have noticed, but you've been using an object this whole time: `console`. The `log()` function is actually a property of the console object which you access using the "dot syntax." You can access properties of any object using like this.
 
 You can also access properties using another syntax with brackets.
 
