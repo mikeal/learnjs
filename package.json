@@ -1,6 +1,6 @@
 {
   "name": "learnjs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Workshopper for learning JavaScript.",
   "main": "index.js",
   "dependencies": {
