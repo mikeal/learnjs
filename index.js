@@ -22,7 +22,7 @@ function verifyIntro (args, cb) {
     }
     if (e) {
       console.error('Your program did not run :(')
-      console.error(error)
+      console.error(e)
       return cb(false)
     }
     if (stdout !== 'Hello World!') {
@@ -39,7 +39,7 @@ function verifyStrings (args, cb) {
     }
     if (e) {
       console.error('Your program did not run :(')
-      console.error(error)
+      console.error(e)
       return cb(false)
     }
     if (stdout !== 'It\'s a stringy world.\n') {
@@ -57,7 +57,7 @@ function verifyVariables (args, cb) {
     }
     if (e) {
       console.error('Your program did not run :(')
-      console.error(error)
+      console.error(e)
       return cb(false)
     }
     if (stdout !== 'It\'s a stringy world.\n') {
@@ -75,7 +75,7 @@ function verifyObjects1 (args, cb) {
     }
     if (e) {
       console.error('Your program did not run :(')
-      console.error(error)
+      console.error(e)
       return cb(false)
     }
     if (stdout !== 'It\'s a stringy world.\n'.toUpperCase()) {
@@ -93,7 +93,7 @@ function verifyObjects2 (args, cb) {
     }
     if (e) {
       console.error('Your program did not run :(')
-      console.error(error)
+      console.error(e)
       return cb(false)
     }
     if (stdout !== 'It\'s a stringy world.\n'.toUpperCase()) {
@@ -111,11 +111,30 @@ function verifyFunction (args, cb) {
     }
     if (e) {
       console.error('Your program did not run :(')
-      console.error(error)
+      console.error(e)
       return cb(false)
     }
     if (stdout !== 'It\'s a stringy world.\n'.toUpperCase()+ 'It\'s a stringy world.\n'.toUpperCase()) {
       console.log('Your program did not output the exact text "IT\'S A STRINGY WORLD.\\nIT\'S A STRINGY WORLD.". Please check your program, fix the error, and verify again.')
+    }
+  })
+}
+
+function verifyArrays (args, cb) {
+  var program = 'node ' + args[0]
+  // TODO: use emsripten or some shit to validate they are actually pushing to the Array prototype.
+  getOutput(program, function (e, stdout) {
+    console.error(JSON.stringify(stdout))
+    if (stdout === '1\n2\n') {
+      cb(true)
+    }
+    if (e) {
+      console.error('Your program did not run :(')
+      console.error(e)
+      return cb(false)
+    }
+    if (stdout !== '1\n2') {
+      console.log('Your program did not output the exact text "1\\n2\\n". Please check your program, fix the error, and verify again.')
     }
   })
 }
@@ -152,4 +171,9 @@ exports['Making Objects'] =
 exports['Functions'] =
   { problem: docText('functions.mkd')
   , verify: verifyFunction
+  }
+
+exports['Arrays'] =
+  { problem: docText('arrays.mkd')
+  , verify: verifyArrays
   }
