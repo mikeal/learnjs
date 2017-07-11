@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "adventure": "^2.7.0",
-    "cli-md": "^0.1.0"
+    "cli-md": "^1.2.0"
   },
   "devDependencies": {},
   "bin": {
